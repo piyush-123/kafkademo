@@ -5,14 +5,14 @@ from confluent_kafka.serialization import SerializationContext, MessageField
 from confluent_kafka.schema_registry.json_schema import JSONDeserializer
 
 
-API_KEY = 'HNUA2KUYENIP44PV'
-ENDPOINT_SCHEMA_URL  = 'https://psrc-35wr2.us-central1.gcp.confluent.cloud'
-API_SECRET_KEY = 'TH5n14kG1JAD6b8rmf92Y6wyXPY66De2kzbiZUS0jytRfkxpEM4rWdlGVSsM/nFR'
-BOOTSTRAP_SERVER = 'pkc-lzvrd.us-west4.gcp.confluent.cloud:9092'
+API_KEY = '55ER7D463HTEXQSH'
+ENDPOINT_SCHEMA_URL  = 'https://psrc-30dr2.us-central1.gcp.confluent.cloud'
+API_SECRET_KEY = 'kcnHv9HIWETOtvK9F/pu3IPSLLxs9wYgAf5yI2hxQUMG6BOuZDXOq0uS2Z59N3D0'
+BOOTSTRAP_SERVER = 'pkc-41p56.asia-south1.gcp.confluent.cloud:9092'
 SECURITY_PROTOCOL = 'SASL_SSL'
 SSL_MACHENISM = 'PLAIN'
-SCHEMA_REGISTRY_API_KEY = 'PBEUUAHOC2GTPJWT'
-SCHEMA_REGISTRY_API_SECRET = 'EuAq+lp9CJYCs2n/TKOdhk9C2bbMl0ZRyE6KfYJ0v2Ng6anqHnLzqAtCjSwMSE+Y'
+SCHEMA_REGISTRY_API_KEY = 'KKWFPBTDOG6M5NEN'
+SCHEMA_REGISTRY_API_SECRET = '/fCLJRzWk5lBIx26hCHS2N0kAyosGGHJNXRjqs1QNukQ8Uqw61g5pReATSPmWGxB'
 
 
 def sasl_conf():
@@ -147,4 +147,4 @@ def main(topic):
 
     consumer.close()
 
-main("test_topic")
+main("demo_topic_1")

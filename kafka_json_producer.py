@@ -1,22 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-#
-# Copyright 2020 Confluent Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
 
-
-# A simple example demonstrating use of JSONSerializer.
 
 import argparse
 from uuid import uuid4
@@ -29,19 +11,19 @@ from confluent_kafka.schema_registry.json_schema import JSONSerializer
 import pandas as pd
 from typing import List
 
-FILE_PATH = "/Users/shashankmishra/Desktop/Kafka Classes/Confluen Kafka Setup/Confluent-Kafka-Setup/cardekho_dataset.csv"
+FILE_PATH = "cardekho_dataset.csv"
 columns=['car_name', 'brand', 'model', 'vehicle_age', 'km_driven', 'seller_type',
        'fuel_type', 'transmission_type', 'mileage', 'engine', 'max_power',
        'seats', 'selling_price']
 
-API_KEY = 'HNUA2KUYENIP44PV'
-ENDPOINT_SCHEMA_URL  = 'https://psrc-35wr2.us-central1.gcp.confluent.cloud'
-API_SECRET_KEY = 'TH5n14kG1JAD6b8rmf92Y6wyXPY66De2kzbiZUS0jytRfkxpEM4rWdlGVSsM/nFR'
-BOOTSTRAP_SERVER = 'pkc-lzvrd.us-west4.gcp.confluent.cloud:9092'
+API_KEY = '55ER7D463HTEXQSH'
+ENDPOINT_SCHEMA_URL  = 'https://psrc-30dr2.us-central1.gcp.confluent.cloud'
+API_SECRET_KEY = 'TkcnHv9HIWETOtvK9F/pu3IPSLLxs9wYgAf5yI2hxQUMG6BOuZDXOq0uS2Z59N3D0'
+BOOTSTRAP_SERVER = 'pkc-41p56.asia-south1.gcp.confluent.cloud:9092'
 SECURITY_PROTOCOL = 'SASL_SSL'
 SSL_MACHENISM = 'PLAIN'
-SCHEMA_REGISTRY_API_KEY = 'PBEUUAHOC2GTPJWT'
-SCHEMA_REGISTRY_API_SECRET = 'EuAq+lp9CJYCs2n/TKOdhk9C2bbMl0ZRyE6KfYJ0v2Ng6anqHnLzqAtCjSwMSE+Y'
+SCHEMA_REGISTRY_API_KEY = 'KKWFPBTDOG6M5NEN'
+SCHEMA_REGISTRY_API_SECRET = '/fCLJRzWk5lBIx26hCHS2N0kAyosGGHJNXRjqs1QNukQ8Uqw61g5pReATSPmWGxB'
 
 
 def sasl_conf():
@@ -216,4 +198,4 @@ def main(topic):
     print("\nFlushing records...")
     producer.flush()
 
-main("test_topic")
+main("demo_topic_1")
